@@ -13,6 +13,8 @@ import { RouterLink, RouterView } from 'vue-router';
       <RouterLink to="/TestThree">TestThree</RouterLink>
       <RouterLink to="/TestFour">TestFour</RouterLink>
       <RouterLink to="/TestFive">TestFive</RouterLink>
+      <RouterLink to="/TestSix">TestSix</RouterLink>
+      <RouterLink to="/TestSeven">TestSeven</RouterLink>
     </nav>
   </header>
 

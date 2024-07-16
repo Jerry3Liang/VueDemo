@@ -5,6 +5,8 @@ import TestTwo from '../views/TestTwo.vue';
 import TestThree from '../views/TestThree.vue';
 import TestFour from '../views/TestFour.vue';
 import TestFive from '../views/TestFive.vue';
+import TestSix from '../views/TestSix.vue';
+import TestSeven from '../views/TestSeven.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,6 +40,16 @@ const router = createRouter({
       path: '/TestFive',
       name: 'testFive',
       component: TestFive
+    },
+    {
+      path: '/TestSix',
+      name: 'testSix',
+      component: TestSix
+    },
+    {
+      path: '/TestSeven',
+      name: 'testSeven',
+      component: TestSeven
     }
   ]
 });
