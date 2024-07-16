@@ -1,11 +1,21 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router';
+import TestEight from './views/TestEight.vue';
+import { ref } from 'vue';
+
+const greeting = ref('father: hello world');
+const greeting1 = ref('no child message');
 </script>
 
 <template>
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
+    <TestEight :message="greeting" @response="(msg) => (greeting1 = msg)"></TestEight>
+
+    <h2>{{ message || '沒使用 props' }}</h2>
+
+    <p>{{ greeting1 }}</p>
     <nav>
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/TestOne">TestOne</RouterLink>
@@ -15,6 +25,7 @@ import { RouterLink, RouterView } from 'vue-router';
       <RouterLink to="/TestFive">TestFive</RouterLink>
       <RouterLink to="/TestSix">TestSix</RouterLink>
       <RouterLink to="/TestSeven">TestSeven</RouterLink>
+      <RouterLink to="/TestEight">TestEight</RouterLink>
     </nav>
   </header>
 
