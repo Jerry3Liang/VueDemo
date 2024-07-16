@@ -2,6 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import TestOne from '../views/TestOne.vue';
 import TestTwo from '../views/TestTwo.vue';
+import TestThree from '../views/TestThree.vue';
+import TestFour from '../views/TestFour.vue';
+import TestFive from '../views/TestFive.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,6 +23,21 @@ const router = createRouter({
       path: '/TestTwo',
       name: 'testTwo',
       component: TestTwo
+    },
+    {
+      path: '/TestThree',
+      name: 'testThree',
+      component: TestThree
+    },
+    {
+      path: '/TestFour',
+      name: 'testFour',
+      component: TestFour
+    },
+    {
+      path: '/TestFive',
+      name: 'testFive',
+      component: TestFive
     }
   ]
 });
