@@ -1,10 +1,12 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router';
 import TestEight from './views/TestEight.vue';
+import TestNine from './views/TestNine.vue';
 import { ref } from 'vue';
 
 const greeting = ref('father: hello world');
 const greeting1 = ref('no child message');
+const greeting2 = ref('父元件內容');
 </script>
 
 <template>
@@ -16,6 +18,8 @@ const greeting1 = ref('no child message');
     <h2>{{ message || '沒使用 props' }}</h2>
 
     <p>{{ greeting1 }}</p>
+
+    <TestNine>{{ greeting2 }}</TestNine>
     <nav>
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/TestOne">TestOne</RouterLink>
@@ -26,6 +30,7 @@ const greeting1 = ref('no child message');
       <RouterLink to="/TestSix">TestSix</RouterLink>
       <RouterLink to="/TestSeven">TestSeven</RouterLink>
       <RouterLink to="/TestEight">TestEight</RouterLink>
+      <RouterLink to="/TestNine">TestNine</RouterLink>
     </nav>
   </header>
 
