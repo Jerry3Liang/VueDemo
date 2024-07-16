@@ -1,8 +1,17 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router';
+import JSConfetti from 'js-confetti';
 import TestEight from './views/TestEight.vue';
 import TestNine from './views/TestNine.vue';
 import { ref } from 'vue';
+
+const confetti = new JSConfetti();
+
+function showConfetti() {
+  confetti.addConfetti();
+}
+
+showConfetti();
 
 const greeting = ref('father: hello world');
 const greeting1 = ref('no child message');
